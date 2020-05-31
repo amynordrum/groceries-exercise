@@ -30,6 +30,8 @@ print(products)
 
 # TODO: write some Python code here to produce the desired output
 
+#PRODUCTS
+
 products_count = len(products)
 
 print("--------------")
@@ -49,6 +51,23 @@ for p in sorted_products:
     price_usd = "${0:.2f}".format(p["price"])
     print(" + " + p["name"] + " (" + str(price_usd) + ")")
 
+#DEPARTMENTS
+
+departments = []
+for p in products:
+    # print(p["department"])
+    # departments.append(p["department"])
+    if p["department"] not in departments:
+        departments.append(p["department"])
+
+department_count = len(departments)
+
+print("--------------")
+print("THERE ARE " + str(department_count) + " DEPARTMENTS:")
+print("--------------")
+
+for d in departments: 
+    print(d)
 
 
 #  "id":17
@@ -93,4 +112,3 @@ for p in sorted_products:
 #  + Pantry (2 products)
 #  + Personal Care (2 products)
 #  + Snacks (2 products)
-
